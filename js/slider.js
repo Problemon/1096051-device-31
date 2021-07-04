@@ -30,3 +30,17 @@ const benefitsSlide = document.querySelectorAll(".benefits__item");
 const benefitsDots = document.querySelectorAll(".benefits__info-btn");
 makeSlider(benefitsDots, "benefits__info-btn--active", benefitsSlide,  "benefits__item--active", false);
 
+function checkHash () {
+    if (window.location.hash === "#warranty") {
+        let warranty = document.getElementById("warranty");
+        warranty.click();
+    } else if (window.location.hash === "#delivery") {
+        let delivery = document.getElementById("delivery");
+        delivery.click();
+    };
+}
+
+window.onhashchange = function () {
+    checkHash();
+}
+checkHash();

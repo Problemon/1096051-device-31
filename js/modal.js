@@ -33,6 +33,7 @@ buttonOpen.addEventListener("click", function (evt) {
 
 modalFade.addEventListener("click", function () {
     modal.classList.remove("modal--vissible");
+    modal.classList.remove("modal--error");
 });
 
 buttonClose.addEventListener("click", function (evt) {
@@ -65,3 +66,17 @@ modalButtonSubmit.addEventListener("click", function (evt) {
         }
     }
 })
+
+modalButtonSubmit.onfocus = function () {
+    function focusTrap (evt) {
+        if(evt.key === "Tab") {
+            evt.preventDefault();
+            buttonClose.focus();
+
+            window.removeEventListener("keydown", focusTrap);
+        }
+    }
+    window.addEventListener("keydown", focusTrap);
+};
+
+console.log(window.location.hash);

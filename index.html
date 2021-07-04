@@ -12,7 +12,7 @@
     <title>Device</title>
     
     <link rel="stylesheet" href="css/normalize-min.css">
-    <link rel="stylesheet" href="css/style-min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="main-page">
@@ -145,37 +145,37 @@
                 <ul class="devices__list">
                     <li class="devices__item">
                         <a class="devices__item-link" href="catalog.html">
-                            <div class="devices__rect"><img class="devices__item-img" src="img/icons/vr.svg" width="97" height="56" alt=""></div>
+                            <div class="devices__rect devices__rect-vr"></div>
                             <h3 class="devices__item-title">Виртуальная реальность</h3>
                         </a>
                     </li>
                     <li class="devices__item">
                         <a class="devices__item-link" href="catalog.html">
-                            <div class="devices__rect"><img class="devices__item-img" src="img/icons/stick.svg" width="86" height="117" alt=""></div>
+                            <div class="devices__rect devices__rect-stick"></div>
                             <h3 class="devices__item-title">Моноподы<br>для селфи</h3>
                         </a>
                     </li>
                     <li class="devices__item">
                         <a class="devices__item-link" href="catalog.html">
-                            <div class="devices__rect"><img class="devices__item-img" src="img/icons/cam.svg" width="71" height="87" alt=""></div>
+                            <div class="devices__rect devices__rect-cam"></div>
                             <h3 class="devices__item-title">Экшн-камеры</h3>
                         </a>
                     </li>
                     <li class="devices__item">
                         <a class="devices__item-link" href="catalog.html">
-                            <div class="devices__rect"><img class="devices__item-img" src="img/icons/bracelet.svg" width="107" height="65" alt=""></div>
+                            <div class="devices__rect devices__rect-bracelet"></div>
                             <h3 class="devices__item-title">Фитнес-браслеты</h3>
                         </a>
                     </li>
                     <li class="devices__item">
                         <a class="devices__item-link" href="catalog.html">
-                            <div class="devices__rect"><img class="devices__item-img" src="img/icons/watch.svg" width="56" height="98" alt=""></div>
+                            <div class="devices__rect devices__rect-watch"></div>
                             <h3 class="devices__item-title">Умные часы</h3>
                         </a>
                     </li>
                     <li class="devices__item">
                         <a class="devices__item-link" href="catalog.html">
-                            <div class="devices__rect"><img class="devices__item-img" src="img/icons/quadcopter.svg" width="132" height="69" alt=""></div>
+                            <div class="devices__rect devices__rect-quadcopter"></div>
                             <h3 class="devices__item-title">Квадрокоптеры</h3>
                         </a>
                     </li>
@@ -301,12 +301,12 @@
     </footer>
     <section class="modal-map">
         <h2 class="visually-hidden">Интерактивная карта</h2>
-        <button class="btn-close modal-map__btn-close" type="button" aria-label="Закрыть окно"></button>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.6041928839974!2d30.31745782893272!3d59.96808460436126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc48a26c9%3A0x8a49e1486716f5b1!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDXQnywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzAyMg!5e0!3m2!1sru!2sru!4v1624914997451!5m2!1sru!2sru" width="960" height="573" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <button class="btn-close modal-map__btn-close" type="button" aria-label="Закрыть окно" tabindex="2"></button>
+        <iframe class="modal-map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.6041928839974!2d30.31745782893272!3d59.96808460436126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc48a26c9%3A0x8a49e1486716f5b1!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDXQnywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzAyMg!5e0!3m2!1sru!2sru!4v1624914997451!5m2!1sru!2sru" width="960" height="573" style="border:0;" allowfullscreen="" loading="lazy" tabindex="1"></iframe>
         <div class="modal-map__fade"></div>
     </section>
     <section class="modal">
-        <h2 class="visually-hidden">ФОрма обратной связи</h2>
+        <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="modal__form" action="https://echo.htmlacademy.ru" method="POST">
             <button class="btn-close modal__form-btn-close" type="button" aria-label="Закрыть окно"></button>
             <label class="modal__form-label">Ваше имя:
@@ -322,9 +322,9 @@
         </form>
         <div class="modal__fade"></div>
     </section>
-    <script src="js/slider-min.js"></script>
-    <script src="js/modal-map-min.js"></script>
-    <script src="js/modal-min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/modal-map.js"></script>
+    <script src="js/modal.js"></script>
 
 </body>
 </html>

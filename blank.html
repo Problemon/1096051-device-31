@@ -11,15 +11,15 @@
     <link rel="manifest" href="manifest.webmanifest">
     <title>Device</title>
     
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize-min.css">
+    <link rel="stylesheet" href="css/style-min.css">
 </head>
 
 <body class="main-page">
     <header class="header">
         <div class="container">
             <nav class="header__navigation">
-                <a class="logo-link logo-link--available" href="index.html" aria-label="На главную"><img class="logo-img" src="img/logo.svg" width="163" height="35" alt=""></a>
+                <a class="logo-link"><img class="logo-img" src="img/logo.svg" width="163" height="35" alt=""></a>
                 <form class="header__form" action="https://echo.htmlacademy.ru/" method="POST">
                     <label class="header__label-search" for="search"><span class="visually-hidden">Поиск</span></label>
                     <input class="header__search" id="search" type="text" placeholder="Поиск по сайту">
@@ -54,7 +54,7 @@
                 <ul class="info header__info">
                     <li class="info__item"><a class="link info__link" href="index.html#delivery">доставка</a></li>
                     <li class="info__item"><a class="link info__link" href="index.html#warranty">гарантия</a></li>
-                    <li class="info__item"><a class="link info__link" href="blank.html">контакты</a></li>
+                    <li class="info__item"><a class="link info__link" href="#contacts">контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -65,8 +65,8 @@
     <footer class="footer">
         <div class="container container-footer">
             <div class="footer__left">
-                <a class="footer__logo-link logo-link--available" href="index.html" aria-label="На главную"><img class="logo-footer-img" src="img/logo-footer.svg" width="163" height="35" alt=""></a>
-                <address class="footer__contacts">
+                <a class="footer__logo-link" aria-label="На главную"><img class="logo-footer-img" src="img/logo-footer.svg" width="163" height="35" alt=""></a>
+                <address class="footer__contacts-left">
                     <a class="footer__address" href="https://goo.gl/maps/7P9EZhWz3nWyR2ZSA">
                         Санкт-Петербург, набережная<br>
                         реки Карповки, 5, литера П.
@@ -91,7 +91,7 @@
                     <li class="footer__user-menu-item"><a class="footer__user-menu-link footer__user-menu-link--compare" href="blank.html">Сравнить</a></li>
                     <li class="footer__user-menu-item"><a class="footer__user-menu-link footer__user-menu-link--basket" href="blank.html">Корзина</a></li>
                 </ul>
-                <address class="footer__contacts"><a class="footer__phone" href="tel:78005558628">Тел.: +7 800 555-86-28</a></address>
+                <address class="footer__contacts-right"><a class="footer__phone" href="tel:78005558628" id="contacts">Тел.: +7 800 555-86-28</a></address>
                 <a class="copy-link" href="https://htmlacademy.ru/intensive/htmlcss">
                     <img class="copy-logo" src="img/logo_htmlacademy.svg" width="115" height="33" alt="">
                 </a>
