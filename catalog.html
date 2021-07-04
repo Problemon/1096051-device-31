@@ -74,9 +74,9 @@
                 <div class="container sort">
                     <h3 class="title-2 sort__title">сортировка:</h3>
                     <ul class="sort__list">
-                        <li class="sort__item"><button class="sort__item-btn sort__item-btn--active" type="button">По цене</button></li>
-                        <li class="sort__item"><button class="sort__item-btn" type="button">По типу</button></li>
-                        <li class="sort__item"><button class="sort__item-btn" type="button">По популярности</button></li>
+                        <li class="sort__item"><a class="sort__item-btn sort__item-btn--active">По цене</a></li>
+                        <li class="sort__item"><a class="sort__item-btn">По типу</a></li>
+                        <li class="sort__item"><a class="sort__item-btn">По популярности</a></li>
                     </ul>
                     <div class="sort__arrows">
                         <button class="sort__arrow sort__from-less" type="button" aria-label="Сортировать от низшего"></button>
@@ -164,47 +164,39 @@
                 <div class="container container-goods">
                     <ul class="goods__list">
                         <li class="goods__item">
-                            <a class="goods__item-link" href="blank.html">
-                                <p class="goods__item-title">Любительская селфи-палка</p>
+                                <a class="goods__item-title" href="blank.html">Любительская селфи-палка</a>
                                 <img class="goods__item-img" src="img/devices/stick1.jpg" width="360" height="380" alt="">
                                 <span class="goods__item-prcie">1 100 руб.</span>
-                            </a>
                             <div class="goods__item-buttons">
-                                <button class="btn goods__item-basket">в корзину</button>
-                                <button class="goods__item-compare">Добавить к сравнению</button>
+                                <a class="btn goods__item-basket" href="blank.html">в корзину</a>
+                                <a class="goods__item-compare" href="blank.html">Добавить к сравнению</a>
                             </div>
                         </li>
                         <li class="goods__item">
-                            <a class="goods__item-link" href="blank.html">
-                                <p class="goods__item-title">Профессиональная<br>селфи-палка </p>
+                                <a class="goods__item-title" href="blank.html">Профессиональная<br>селфи-палка </a>
                                 <img class="goods__item-img" src="img/devices/stick2.jpg" width="360" height="380" alt="">
                                 <span class="goods__item-prcie">1 500 руб.</span>
-                            </a>
                             <div class="goods__item-buttons">
-                                <button class="btn goods__item-basket">в корзину</button>
-                                <button class="goods__item-compare">Добавить к сравнению</button>
+                                <a class="btn goods__item-basket" href="blank.html">в корзину</a>
+                                <a class="goods__item-compare" href="blank.html">Добавить к сравнению</a>
                             </div>
                         </li>
                         <li class="goods__item">
-                            <a class="goods__item-link" href="blank.html">
-                                <p class="goods__item-title">Непотопляемая<br>селфи-палка</p>
+                                <a class="goods__item-title" href="blank.html">Непотопляемая<br>селфи-палка</a>
                                 <img class="goods__item-img" src="img/devices/stick3.jpg" width="360" height="380" alt="">
                                 <span class="goods__item-prcie">1 500 руб.</span>
-                            </a>
                             <div class="goods__item-buttons">
-                                <button class="btn goods__item-basket">в корзину</button>
-                                <button class="goods__item-compare">Добавить к сравнению</button>
+                                <a class="btn goods__item-basket" href="blank.html">в корзину</a>
+                                <a class="goods__item-compare" href="blank.html">Добавить к сравнению</a>
                             </div>
                         </li>
-                        <li class="goods__item">
-                            <a class="goods__item-link goods__item-link--new" href="blank.html">
-                                <p class="goods__item-title">Селфи-палка «Следуй за<br>мной»</p>
+                        <li class="goods__item goods__item--new">
+                                <a class="goods__item-title" href="blank.html" aria-label="Новинка">Селфи-палка «Следуй за мной»</a>
                                 <img class="goods__item-img" src="img/devices/stick4.jpg" width="360" height="380" alt="">
                                 <span class="goods__item-prcie">1 900 руб.</span>
-                            </a>
                             <div class="goods__item-buttons">
-                                <button class="btn goods__item-basket">в корзину</button>
-                                <button class="goods__item-compare">Добавить к сравнению</button>
+                                <a class="btn goods__item-basket" href="blank.html">в корзину</a>
+                                <a class="goods__item-compare" href="blank.html">Добавить к сравнению</a>
                             </div>
                         </li>
                     </ul>
@@ -215,7 +207,7 @@
                         <li class="goods__pagination-numbers">
                             <ul class="goods__pagination-slides">
                                 <li class="goods__pagination-slide">
-                                    <button class="goods__pagination-slide-btn goods__pagination-slide-btn--active" type="button">1</button>
+                                    <button class="goods__pagination-slide-btn goods__pagination-slide-btn--active" type="button" disabled>1</button>
                                 </li>
                                 <li class="goods__pagination-slide">
                                     <button class="goods__pagination-slide-btn" type="button">2</button>
@@ -263,7 +255,7 @@
                     <li class="footer__user-menu-item"><a class="footer__user-menu-link footer__user-menu-link--basket" href="blank.html">Корзина</a></li>
                 </ul>
                 <address class="footer__contacts-right"><a class="footer__phone" href="tel:78005558628" id="contacts">Тел.: +7 800 555-86-28</a></address>
-                <a class="copy-link" href="https://htmlacademy.ru/intensive/htmlcss">
+                <a class="copy-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсив от HTMLacademy">
                     <img class="copy-logo" src="img/logo_htmlacademy.svg" width="115" height="33" alt="">
                 </a>
             </div>
