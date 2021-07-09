@@ -1,3 +1,28 @@
+const carouselList = document.querySelector(".carousel__list");
+const carouselProducts = document.querySelectorAll(".carousel__product");
+const carouselDots = document.querySelectorAll(".carousel__dot-button");
+
+let count = 0;
+let carouselWidth;
+
+function setWidth () {
+    
+    carouselWidth = document.querySelector(".carousel-slider").offsetWidth;
+    carouselList.style.width = carouselWidth * carouselProducts.length + "px";
+    console.log(carouselList.offsetWidth);
+    console.log(carouselWidth);
+    carouselProducts.forEach( item => {
+        item.style.width = carouselWidth + "px";
+        console.log(item.offsetWidth);
+    })
+}
+
+window.addEventListener("resize", setWidth);
+setWidth();
+
+
+
+
 function makeSlider (dots, dotClassActive, slides, slideClassActive, reverse) {
     dots.forEach( function (element, id) {
         element.addEventListener ("click", function () {
@@ -21,10 +46,6 @@ function makeSlider (dots, dotClassActive, slides, slideClassActive, reverse) {
         })
     });
 }
-
-const carouselProducts = document.querySelectorAll(".carousel__product");
-const carouselDots = document.querySelectorAll(".carousel__dot-button");
-makeSlider(carouselDots, "carousel__dot-button--active", carouselProducts,  "carousel__product--active", true)
 
 const benefitsSlide = document.querySelectorAll(".benefits__item");
 const benefitsDots = document.querySelectorAll(".benefits__info-btn");
