@@ -1,3 +1,25 @@
+function makeSlider (dots, dotClassActive, slides, slideClassActive) {
+    dots.forEach( function (element, id) {
+        element.addEventListener ("click", function () {
+            let prevDot = document.querySelector("."+dotClassActive);
+            prevDot.removeAttribute("disabled");
+            prevDot.classList.remove(dotClassActive);
+            
+            if (slideClassActive) {
+                let slideActive = document.querySelector("."+slideClassActive);
+                slideActive.classList.remove(slideClassActive);
+                slides[id].classList.add(slideClassActive);
+            } else {
+                choiceSlide(id, true);
+            }
+            
+            element.setAttribute("disabled", "");
+            element.classList.add(dotClassActive);
+        })
+    });
+}
+
+
 const carouselList = document.querySelector(".carousel__list");
 const carouselProducts = document.querySelectorAll(".carousel__product");
 const carouselDots = document.querySelectorAll(".carousel__dot-button");
@@ -6,50 +28,36 @@ let count = 0;
 let carouselWidth;
 
 function setWidth () {
-    
     carouselWidth = document.querySelector(".carousel-slider").offsetWidth;
     carouselList.style.width = carouselWidth * carouselProducts.length + "px";
-    console.log(carouselList.offsetWidth);
-    console.log(carouselWidth);
+    
     carouselProducts.forEach( item => {
         item.style.width = carouselWidth + "px";
-        console.log(item.offsetWidth);
     })
-}
+
+    choiceSlide(count, false) 
+};
 
 window.addEventListener("resize", setWidth);
 setWidth();
 
+function choiceSlide (ind, isReverse) {
+    if (isReverse) {
+        count = carouselProducts.length - ind - 1;
+    } else {
+        count = ind;
+    };
+    carouselList.style.transform = "translate(-" + count * carouselWidth + "px)";
+};
 
+makeSlider(carouselDots, "carousel__dot-button--active", carouselProducts, false);
 
-
-function makeSlider (dots, dotClassActive, slides, slideClassActive, reverse) {
-    dots.forEach( function (element, id) {
-        element.addEventListener ("click", function () {
-            let prevDot = document.querySelector("."+dotClassActive);
-            prevDot.removeAttribute("disabled");
-            prevDot.classList.remove(dotClassActive);
-    
-            let slideActive = document.querySelector("."+slideClassActive);
-            slideActive.classList.remove(slideClassActive);
-            
-            element.setAttribute("disabled", "");
-            element.classList.add(dotClassActive);
-            
-            let slideId = id;
-
-            if (reverse) {
-                slideId = slides.length - id - 1;
-            };
-
-            slides[slideId].classList.add(slideClassActive);
-        })
-    });
-}
 
 const benefitsSlide = document.querySelectorAll(".benefits__item");
 const benefitsDots = document.querySelectorAll(".benefits__info-btn");
-makeSlider(benefitsDots, "benefits__info-btn--active", benefitsSlide,  "benefits__item--active", false);
+makeSlider(benefitsDots, "benefits__info-btn--active", benefitsSlide,  "benefits__item--active");
+
+
 
 function checkHash () {
     if (window.location.hash === "#warranty") {
