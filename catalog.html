@@ -20,42 +20,45 @@
         <div class="container">
             <nav class="header__navigation">
                 <a class="logo-link logo-link--available" href="index.html" aria-label="На главную"><img class="logo-img" src="img/logo.svg" width="163" height="35" alt=""></a>
-                <form class="header__form" action="https://echo.htmlacademy.ru/" method="POST">
-                    <label class="header__label-search" for="search"><span class="visually-hidden">Поиск</span></label>
-                    <input class="header__search" id="search" type="text" placeholder="Поиск по сайту">
-                    <button class="header__search-btn" name="search" type="submit">найти</button>
-                </form>
-                <a class="link header__catalog" href="catalog.html">каталог товаров</a>
-                <ul class="header__sub-menu">
-                    <li class="header__sub-menu-item">
-                        <ul class="header__sub-menu-list">
-                            <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="javascript:;">Виртуальная реальность</a></li>
-                            <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="catalog.html">Моноподы для селфи</a></li>
-                            <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="javascript:;">Экшн-камеры</a></li>
-                        </ul>
-                    </li>
-                    <li class="header__sub-menu-item">
-                        <ul class="header__sub-menu-list">
-                            <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="javascript:;">Фитнес-браслеты</a></li>
-                            <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="javascript:;">Умные часы</a></li>
-                        </ul>
-                    </li>
-                    <li class="header__sub-menu-item">
-                        <ul class="header__sub-menu-list">
-                            <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="javascript:;">Квадрокоптер</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="user-menu">
-                    <li class="user-menu__item"><a class="user-menu__link user-menu__link--login" href="javascript:;">Валентин Петухов</a><a class="user-menu__link user-menu__link--logout" href="javascript:;">Выйти</a></li>
-                    <li class="user-menu__item"><a class="user-menu__link user-menu__link--compare" href="javascript:;">Сравнить</a></li>
-                    <li class="user-menu__item"><a class="user-menu__link user-menu__link--basket" href="javascript:;">Корзина</a></li>
-                </ul>
-                <ul class="info header__info">
-                    <li class="info__item"><a class="link info__link" href="index.html#delivery">доставка</a></li>
-                    <li class="info__item"><a class="link info__link" href="index.html#warranty">гарантия</a></li>
-                    <li class="info__item"><a class="link info__link" href="index.html#contacts">контакты</a></li>
-                </ul>
+                <button class="header__menu-icon" type="button"><span class="visually-hidden">Открыть меню</span></button>
+                <div class="header__menu">
+                    <form class="header__form" action="https://echo.htmlacademy.ru/" method="POST">
+                        <label class="header__label-search" for="search"><span class="visually-hidden">Поиск</span></label>
+                        <input class="header__search" id="search" type="text" placeholder="Поиск по сайту">
+                        <button class="header__search-btn" name="search" type="submit">найти</button>
+                    </form>
+                    <a class="link header__catalog" href="catalog.html">каталог товаров</a>
+                    <ul class="header__sub-menu">
+                        <li class="header__sub-menu-item">
+                            <ul class="header__sub-menu-list">
+                                <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="javascript:;">Виртуальная реальность</a></li>
+                                <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="catalog.html">Моноподы для селфи</a></li>
+                                <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="javascript:;">Экшн-камеры</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__sub-menu-item">
+                            <ul class="header__sub-menu-list">
+                                <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="javascript:;">Фитнес-браслеты</a></li>
+                                <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="javascript:;">Умные часы</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__sub-menu-item">
+                            <ul class="header__sub-menu-list">
+                                <li class="header__sub-menu-good"><a class="header__sub-menu-good-link" href="javascript:;">Квадрокоптер</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="user-menu">
+                        <li class="user-menu__item"><a class="user-menu__link user-menu__link--login" href="javascript:;">Валентин Петухов</a><a class="user-menu__link user-menu__link--logout" href="javascript:;">Выйти</a></li>
+                        <li class="user-menu__item"><a class="user-menu__link user-menu__link--compare" href="javascript:;">Сравнить</a></li>
+                        <li class="user-menu__item"><a class="user-menu__link user-menu__link--basket" href="javascript:;">Корзина</a></li>
+                    </ul>
+                    <ul class="info header__info">
+                        <li class="info__item"><a class="link info__link" href="index.html#delivery">доставка</a></li>
+                        <li class="info__item"><a class="link info__link" href="index.html#warranty">гарантия</a></li>
+                        <li class="info__item"><a class="link info__link" href="index.html#contacts">контакты</a></li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -261,5 +264,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/hamburger.js"></script>
 </body>
 </html>
