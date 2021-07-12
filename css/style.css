@@ -573,6 +573,14 @@
     position: relative;
 }
 
+.carousel-slider.grab {
+    cursor: grab;
+}
+
+.carousel-slider.grabbing {
+    cursor: grabbing;
+}
+
 .carousel__list {
     position: relative;
     display: flex;
@@ -582,7 +590,6 @@
     padding: 0;
     
     counter-reset: product;
-    transition: transform .5s ease;
 }
 
 .carousel__product {
@@ -701,11 +708,16 @@
 .carousel {
     min-height: 550px;
     margin-bottom: 90px;
-    width: calc(100vw - 17px);
 }
 
 .carousel-slider {
     overflow: hidden;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.carousel__img {
+    pointer-events: none;
 }
 
 .carousel__btn {
@@ -938,7 +950,7 @@
     min-width: 160px;
     width: 100%;
 
-    transition: width .4s ease;
+    transition: width .3s ease, height .3s;
 }
 
 .benefits__info-btn--active {
@@ -2522,6 +2534,7 @@
 @media (max-width: 1080px) {
     .main-page {
         grid-template-rows: min-content 150px 1fr min-content;
+        grid-template-columns: 100%;
     }
 
     .header__navigation:after {
@@ -2872,7 +2885,7 @@
     }
 
     .carousel__container {
-        padding: 0 3px 0 23px;
+        padding: 0 20px 0 23px;
     }
 
     .devices__list {
@@ -3072,6 +3085,11 @@
 
     .benefits {
         margin-bottom: 50px;
+    }
+
+    .about__btn,
+    .contacts__btn {
+        align-self: center;
     }
 
     .container-footer {
