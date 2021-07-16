@@ -7,6 +7,7 @@ window.addEventListener("click", function(evt) {
     !evt.target.closest(".header__menu--active")) {
         hideMenu();
         headerMenu.classList.remove("header__menu--active");
+        headerMenu.classList.remove("header__menu--hide");
     };
 });
 
@@ -46,6 +47,7 @@ catalogProducts.addEventListener("click", function (evt) {
 function hideMenu () {
     if (headerMenu.classList.contains("header__menu--active")) {
         headerMenu.classList.add("header__menu--hide");
+        headerMenu.onanimationend = () => {headerMenu.classList.remove("header__menu--hide");};
     } else {
         headerMenu.classList.remove("header__menu--hide");
     }
