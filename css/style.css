@@ -2698,16 +2698,22 @@
         
         box-sizing: border-box;
         width: 100%;
-        padding: 0 57px 0px 60px;
+        padding: 0 57px 26px 60px;
         transform: translateX(-130%);
         
         z-index: 1;
         overflow: hidden;
         background-color: var(--special-yellow);
     }
+
+    .header__menu--hide {
+        animation-name: hideMenu;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+    }
     
     .header__menu--active {
-        padding-bottom: 26px;
         animation-name: showMenu;
         animation-duration: .5s;
         animation-fill-mode: forwards;
@@ -3018,13 +3024,9 @@
     }
     
     .header__menu {
-        padding: 0 20px 0px 23px;
+        padding: 0 20px 10px 23px;
     }
 
-    .header__menu--active {
-        padding-bottom: 10px;
-    }
-    
     .header__search {
         width: 100%;
         padding: 5px 5px 5px 20px;
@@ -3382,4 +3384,10 @@
     60%       {transform: translateX(0%) skewX(5deg);}
     70%, 80%  {transform: translateX(5%) skewX(-5deg);} 
     100%      {transform: translateX(0%) skewX(0deg);}
+}
+
+@keyframes hideMenu {
+    0%        {transform: translateX(0%) skewX(0deg);}
+    50%        {transform: translateX(-65%) skewX(-20deg);}
+    100%      {transform: translateX(-130%) skewX(0deg);}
 }

@@ -78,5 +78,3 @@ modalButtonSubmit.onfocus = function () {
     }
     window.addEventListener("keydown", focusTrap);
 };
-
-console.log(window.location.hash);
