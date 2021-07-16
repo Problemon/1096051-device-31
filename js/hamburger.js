@@ -7,7 +7,6 @@ window.addEventListener("click", function(evt) {
     !evt.target.closest(".header__menu--active")) {
         hideMenu();
         headerMenu.classList.remove("header__menu--active");
-        headerMenu.classList.remove("header__menu--hide");
     };
 });
 
