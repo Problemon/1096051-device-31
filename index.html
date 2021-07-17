@@ -309,7 +309,7 @@
     <section class="modal-map">
         <h2 class="visually-hidden">Интерактивная карта</h2>
         <button class="btn-close modal-map__btn-close" type="button" aria-label="Закрыть окно" tabindex="2"></button>
-        <iframe class="modal-map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.6041928839974!2d30.31745782893272!3d59.96808460436126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc48a26c9%3A0x8a49e1486716f5b1!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDXQnywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzAyMg!5e0!3m2!1sru!2sru!4v1624914997451!5m2!1sru!2sru" width="960" height="573" style="border:0;" allowfullscreen="" loading="lazy" tabindex="1"></iframe>
+        <div class="modal-map__frame" id="map"></div>
         <div class="modal-map__fade"></div>
     </section>
     <section class="modal">
@@ -329,9 +329,10 @@
         </form>
         <div class="modal__fade"></div>
     </section>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f1bfa766-8bde-449e-9c51-36d3a2651f95&lang=ru_RU" type="text/javascript"></script>
     <script src="js/hamburger.js"></script>
     <script src="js/slider-min.js"></script>
-    <script src="js/modal-map-min.js"></script>
+    <script src="js/modal-map.js"></script>
     <script src="js/modal.js"></script>
 </body>
 </html>

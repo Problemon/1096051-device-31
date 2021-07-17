@@ -4,6 +4,36 @@ const modalMapFrame = modalMap.querySelector(".modal-map__frame");
 const modalMapFade = modalMap.querySelector(".modal-map__fade");
 const mapButtonClose = modalMap.querySelector(".modal-map__btn-close");
 
+
+ymaps.ready(init);
+
+function init(){
+    let myMap = new ymaps.Map("map", {
+        center: [59.96832206412432,30.31735949999995],
+        zoom: 18
+    }),
+
+    myGeoObject = new ymaps.GeoObject({
+        geometry: {
+            type: "Point",
+            coordinates: [59.96832206412432,30.31735949999995]
+        },
+        properties: {
+            hintContent: `Санкт-Петербург, набережная
+                          реки Карповки, 5, литера П.`
+        }
+    }, {
+        preset: 'islands#blackStretchyIcon',
+        draggable: true,
+        iconColor: "red"
+    });
+
+myMap.geoObjects
+    .add(myGeoObject)
+}
+
+
+
 map.addEventListener ("click", function (evt) {
     modalMap.classList.add("modal-map--vissible");
     modalMapFrame.focus();
