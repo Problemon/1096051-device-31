@@ -2325,7 +2325,7 @@
     background-color: var(--good-image);
     z-index: -1;
 
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, z-index 0.4s;
 }
 
 .goods__item:focus-within .goods__item-buttons,
@@ -2337,6 +2337,8 @@
 }
 
 .goods__item-basket {
+    transform: translateY(150px);
+
     min-width: 200px;
     max-width: 360px;
     margin-bottom: 13px;
@@ -2348,10 +2350,13 @@
 
     background-color: transparent;
     cursor: pointer;
+    transition: transform 0.4s ease-out;
 }
 
 
 .goods__item-compare {
+    transform: translateY(150px);
+
     margin-right: 5px;
     padding: 0;
     border: none;
@@ -2369,7 +2374,14 @@
     background-color: transparent;
     cursor: pointer;
 
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, transform 0.4s ease-out;
+}
+
+.goods__item:focus-within .goods__item-compare,
+.goods__item:focus-within .goods__item-basket,
+.goods__item:hover .goods__item-compare,
+.goods__item:hover .goods__item-basket {
+    transform: translateY(0px);
 }
 
 .goods__item-compare:hover,

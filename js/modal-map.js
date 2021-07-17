@@ -28,17 +28,17 @@ function init(){
         iconColor: "red"
     });
 
+    map.addEventListener ("click", function (evt) {
+        modalMap.classList.add("modal-map--vissible");
+        modalMapFrame.focus();
+        myMap.container.fitToViewport()
+        evt.preventDefault();
+    })
+
 myMap.geoObjects
     .add(myGeoObject)
 }
 
-
-
-map.addEventListener ("click", function (evt) {
-    modalMap.classList.add("modal-map--vissible");
-    modalMapFrame.focus();
-    evt.preventDefault();
-})
 
 modalMapFade.addEventListener ("click", function (evt) {
     modalMap.classList.remove("modal-map--vissible");
