@@ -2120,6 +2120,10 @@
     transition: opacity .2s;
 }
 
+.colors__item-input.focus-visible + .colors__item-checkbox::before {
+    outline: 2px solid var(--basic-black);
+}
+
 .colors__item-input:not(:disabled):hover + .colors__item-checkbox::before,
 .colors__item-input:focus + .colors__item-checkbox::before {
     opacity: 0.6;
@@ -2199,6 +2203,10 @@
     background-color: transparent;
 
     transition: opacity .2s, background-color .2s;
+}
+
+.bluetooth__item-input.focus-visible + .bluetooth__item-radio::before {
+    outline: 2px solid var(--basic-black);
 }
 
 .bluetooth__item-input:not(:disabled):hover + .bluetooth__item-radio::before,
