@@ -1497,6 +1497,10 @@
             animation-duration: 0.3s;
 }
 
+.modal-map__frame {
+    height: 570px;
+}
+
 .modal-map__fade {
     position: fixed;
 
@@ -2582,7 +2586,6 @@
 
     .modal-map__frame {
         width: 100%;
-        height: 570px;
     }
 
     .modal-map__btn-close {
