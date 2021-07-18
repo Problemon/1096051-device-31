@@ -2122,6 +2122,7 @@
 
 .colors__item-input.focus-visible + .colors__item-checkbox::before {
     outline: 2px solid var(--basic-black);
+    outline-offset: 2px;
 }
 
 .colors__item-input:not(:disabled):hover + .colors__item-checkbox::before,
@@ -2207,6 +2208,7 @@
 
 .bluetooth__item-input.focus-visible + .bluetooth__item-radio::before {
     outline: 2px solid var(--basic-black);
+    outline-offset: 1px;
 }
 
 .bluetooth__item-input:not(:disabled):hover + .bluetooth__item-radio::before,
